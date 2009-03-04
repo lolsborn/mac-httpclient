@@ -1,0 +1,59 @@
+// !$*UTF8*$!
+{
+	00201A0D0F5E1D0800EFFDA1 /* HTTPClient */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = HTTPClient;
+		sourceDirectories = (
+		);
+	};
+	00201A210F5E1D2900EFFDA1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	00201A220F5E1D2900EFFDA1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 00201A0D0F5E1D0800EFFDA1 /* HTTPClient */;
+		activeTarget = 8D15AC270486D014006FF6A4 /* HTTPClient */;
+		codeSenseManager = 00201A220F5E1D2900EFFDA1 /* Code sense */;
+		executables = (
+			00201A0D0F5E1D0800EFFDA1 /* HTTPClient */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 257826056;
+			PBXWorkspaceStateSaveDate = 257826056;
+		};
+		sourceControlManager = 00201A210F5E1D2900EFFDA1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D15AC270486D014006FF6A4 /* HTTPClient */ = {
+		activeExec = 0;
+		executables = (
+			00201A0D0F5E1D0800EFFDA1 /* HTTPClient */,
+		);
+	};
+}
