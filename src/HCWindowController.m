@@ -474,6 +474,7 @@
         [command addObserver:self forKeyPath:@"body" options:NSKeyValueObservingOptionNew context:NULL];
         [command addObserver:self forKeyPath:@"method" options:NSKeyValueObservingOptionNew context:NULL];
         [command addObserver:self forKeyPath:@"followRedirects" options:NSKeyValueObservingOptionNew context:NULL];
+				[command addObserver:self forKeyPath:@"validatesCertificateChain" options:NSKeyValueObservingOptionNew context:NULL];
     }
 }
 

@@ -16,10 +16,11 @@
                                 body:(NSString *)body 
                              headers:(NSArray *)headers 
                      followRedirects:(BOOL)followRedirects 
+					 validatesCertificateChain:(BOOL)validatesCertificateChain
                    getFinalURLString:(NSString **)outFinalURLString;
 
 - (CFHTTPMessageRef)copyHTTPRequestWithURL:(NSURL *)URL method:(NSString *)method body:(NSString *)body headers:(NSArray *)headers;
-- (CFHTTPMessageRef)copyResponseBySendingHTTPRequest:(CFHTTPMessageRef)req followRedirects:(BOOL)followRedirects;
+- (CFHTTPMessageRef)copyResponseBySendingHTTPRequest:(CFHTTPMessageRef)req followRedirects:(BOOL)followRedirects validatesCertificateChain:(BOOL)validatesCertificateChain;
 - (NSString *)rawStringForHTTPMessage:(CFHTTPMessageRef)message;
 - (NSStringEncoding)stringEncodingForBodyOfHTTPMessage:(CFHTTPMessageRef)message;
 
@@ -80,9 +81,10 @@ static BOOL isAuthChallengeStatusCode(NSInteger statusCode) {
     NSString *body = [command objectForKey:@"body"];
     NSArray *headers = [command objectForKey:@"headers"];
     BOOL followRedirects = [[command objectForKey:@"followRedirects"] boolValue];
+		BOOL validatesCertificateChain = [[command objectForKey:@"validatesCertificateChain"] boolValue];
     
     NSString *finalURLString = nil;
-    NSString *rawResponse = [self makeHTTPRequestWithURL:URL method:method body:body headers:headers followRedirects:followRedirects getFinalURLString:&finalURLString];
+		NSString *rawResponse = [self makeHTTPRequestWithURL:URL method:method body:body headers:headers followRedirects:followRedirects validatesCertificateChain:validatesCertificateChain getFinalURLString:&finalURLString];
     
     if (finalURLString.length) {
         [command setObject:finalURLString forKey:@"finalURLString"];
@@ -102,7 +104,7 @@ static BOOL isAuthChallengeStatusCode(NSInteger statusCode) {
 }
 
 
-- (NSString *)makeHTTPRequestWithURL:(NSURL *)URL method:(NSString *)method body:(NSString *)body headers:(NSArray *)headers followRedirects:(BOOL)followRedirects getFinalURLString:(NSString **)outFinalURLString {
+- (NSString *)makeHTTPRequestWithURL:(NSURL *)URL method:(NSString *)method body:(NSString *)body headers:(NSArray *)headers followRedirects:(BOOL)followRedirects validatesCertificateChain:(BOOL)validatesCertificateChain getFinalURLString:(NSString **)outFinalURLString {
     NSString *result = nil;
     CFHTTPMessageRef request = [self copyHTTPRequestWithURL:URL method:method body:body headers:headers];
     CFHTTPMessageRef response = NULL;
@@ -111,7 +113,7 @@ static BOOL isAuthChallengeStatusCode(NSInteger statusCode) {
     
     while (1) {
         //    send request
-        response = [self copyResponseBySendingHTTPRequest:request followRedirects:followRedirects];
+				response = [self copyResponseBySendingHTTPRequest:request followRedirects:followRedirects validatesCertificateChain:validatesCertificateChain];
         
         if (!response) {
             result = nil;
@@ -235,19 +237,22 @@ static BOOL isAuthChallengeStatusCode(NSInteger statusCode) {
 }
 
 
-- (CFHTTPMessageRef)copyResponseBySendingHTTPRequest:(CFHTTPMessageRef)req followRedirects:(BOOL)followRedirects {
+- (CFHTTPMessageRef)copyResponseBySendingHTTPRequest:(CFHTTPMessageRef)req followRedirects:(BOOL)followRedirects validatesCertificateChain:(BOOL)validatesCertificateChain {
     CFHTTPMessageRef response = NULL;
     NSMutableData *responseBodyData = [NSMutableData data];
     
     CFReadStreamRef stream = CFReadStreamCreateForHTTPRequest(kCFAllocatorDefault, req);
     CFBooleanRef autoredirect = followRedirects ? kCFBooleanTrue : kCFBooleanFalse;
     CFReadStreamSetProperty(stream, kCFStreamPropertyHTTPShouldAutoredirect, autoredirect);
-		CFMutableDictionaryRef securityDictRef = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
-	  if (securityDictRef != NULL) {
-	    CFDictionarySetValue(securityDictRef, kCFStreamSSLValidatesCertificateChain, kCFBooleanFalse);
-			CFReadStreamSetProperty(stream, kCFStreamPropertySSLSettings, securityDictRef);
-			CFRelease(securityDictRef);
-	  }
+	
+		if (!validatesCertificateChain) {			
+			CFMutableDictionaryRef securityDictRef = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+			if (securityDictRef != NULL) {
+				CFDictionarySetValue(securityDictRef, kCFStreamSSLValidatesCertificateChain, kCFBooleanFalse);
+				CFReadStreamSetProperty(stream, kCFStreamPropertySSLSettings, securityDictRef);
+				CFRelease(securityDictRef);
+			}
+		}
 	
     CFReadStreamOpen(stream);    
     
