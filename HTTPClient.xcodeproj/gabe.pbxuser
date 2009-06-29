@@ -7,7 +7,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -102,7 +102,7 @@
 		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
 		name = "HTTPServiceCFNetworkImpl.m: 83";
 		rLen = 0;
-		rLoc = 2577;
+		rLoc = 2646;
 		rType = 0;
 		vrLen = 1526;
 		vrLoc = 1922;
@@ -142,7 +142,7 @@
 		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
 		name = "HTTPServiceCFNetworkImpl.m: 83";
 		rLen = 0;
-		rLoc = 2577;
+		rLoc = 2646;
 		rType = 0;
 		vrLen = 1526;
 		vrLoc = 1922;
@@ -172,7 +172,7 @@
 		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
 		name = "HTTPServiceCFNetworkImpl.m: 247";
 		rLen = 0;
-		rLoc = 8880;
+		rLoc = 8949;
 		rType = 0;
 		vrLen = 1843;
 		vrLoc = 8067;
@@ -191,12 +191,116 @@
 			sepNavVisRange = "{0, 1512}";
 		};
 	};
+	007AABC50FF9757D0064D6A3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 007AAB9E0FF972600064D6A3 /* GHNSURL+Utils.h */;
+		name = "GHNSURL+Utils.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1451;
+		vrLoc = 839;
+	};
+	007AABC60FF9757D0064D6A3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 007AAB9F0FF972600064D6A3 /* GHNSURL+Utils.m */;
+		name = "GHNSURL+Utils.m: 33";
+		rLen = 5;
+		rLoc = 1245;
+		rType = 0;
+		vrLen = 1512;
+		vrLoc = 0;
+	};
+	007AABC70FF9757D0064D6A3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
+		name = "HTTPServiceCFNetworkImpl.m: 69";
+		rLen = 0;
+		rLoc = 2109;
+		rType = 0;
+		vrLen = 1495;
+		vrLoc = 1924;
+	};
+	007AABC80FF9757D0064D6A3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
+		name = "HTTPServiceCFNetworkImpl.m: 69";
+		rLen = 0;
+		rLoc = 2109;
+		rType = 0;
+		vrLen = 1497;
+		vrLoc = 1924;
+	};
+	007AABC90FF9757D0064D6A3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 007AAB9E0FF972600064D6A3 /* GHNSURL+Utils.h */;
+		name = "GHNSURL+Utils.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1451;
+		vrLoc = 839;
+	};
+	007AABCA0FF9757D0064D6A3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 007AAB9F0FF972600064D6A3 /* GHNSURL+Utils.m */;
+		name = "GHNSURL+Utils.m: 33";
+		rLen = 5;
+		rLoc = 1245;
+		rType = 0;
+		vrLen = 1512;
+		vrLoc = 0;
+	};
+	007AABCB0FF9757D0064D6A3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
+		name = "HTTPServiceCFNetworkImpl.m: 9";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 1541;
+		vrLoc = 0;
+	};
+	008170570FF9760B00EA4261 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
+		name = "HTTPServiceCFNetworkImpl.m: 12";
+		rLen = 0;
+		rLoc = 199;
+		rType = 0;
+		vrLen = 1541;
+		vrLoc = 0;
+	};
+	008170580FF9760B00EA4261 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D15AC360486D014006FF6A4 /* Info.plist */;
+	};
+	008170590FF9760B00EA4261 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */;
+		name = "HTTPServiceCFNetworkImpl.m: 12";
+		rLen = 0;
+		rLoc = 199;
+		rType = 0;
+		vrLen = 1541;
+		vrLoc = 0;
+	};
+	0081705A0FF9760B00EA4261 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D15AC360486D014006FF6A4 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/gabe/Projects/HTTPClient/Info.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
 	2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 00201A0D0F5E1D0800EFFDA1 /* HTTPClient */;
 		activeTarget = 8D15AC270486D014006FF6A4 /* HTTPClient */;
 		addToTargets = (
-			8D15AC270486D014006FF6A4 /* HTTPClient */,
 		);
 		codeSenseManager = 00201A220F5E1D2900EFFDA1 /* Code sense */;
 		executables = (
@@ -210,7 +314,7 @@
 					20,
 					905,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -225,8 +329,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 268005761;
-			PBXWorkspaceStateSaveDate = 268005761;
+			PBXPerProjectTemplateStateSaveDate = 268006869;
+			PBXWorkspaceStateSaveDate = 268006869;
 		};
 		perUserProjectItems = {
 			00201A5B0F5E212D00EFFDA1 = 00201A5B0F5E212D00EFFDA1 /* PBXTextBookmark */;
@@ -243,6 +347,17 @@
 			00201A6F0F5E21D800EFFDA1 = 00201A6F0F5E21D800EFFDA1 /* PBXTextBookmark */;
 			00201A700F5E21D800EFFDA1 = 00201A700F5E21D800EFFDA1 /* PBXTextBookmark */;
 			00201A780F5E322000EFFDA1 = 00201A780F5E322000EFFDA1 /* PBXTextBookmark */;
+			007AABC50FF9757D0064D6A3 = 007AABC50FF9757D0064D6A3 /* PBXTextBookmark */;
+			007AABC60FF9757D0064D6A3 = 007AABC60FF9757D0064D6A3 /* PBXTextBookmark */;
+			007AABC70FF9757D0064D6A3 = 007AABC70FF9757D0064D6A3 /* PBXTextBookmark */;
+			007AABC80FF9757D0064D6A3 = 007AABC80FF9757D0064D6A3 /* PBXTextBookmark */;
+			007AABC90FF9757D0064D6A3 = 007AABC90FF9757D0064D6A3 /* PBXTextBookmark */;
+			007AABCA0FF9757D0064D6A3 = 007AABCA0FF9757D0064D6A3 /* PBXTextBookmark */;
+			007AABCB0FF9757D0064D6A3 = 007AABCB0FF9757D0064D6A3 /* PBXTextBookmark */;
+			008170570FF9760B00EA4261 /* PBXTextBookmark */ = 008170570FF9760B00EA4261 /* PBXTextBookmark */;
+			008170580FF9760B00EA4261 /* PBXBookmark */ = 008170580FF9760B00EA4261 /* PBXBookmark */;
+			008170590FF9760B00EA4261 /* PBXTextBookmark */ = 008170590FF9760B00EA4261 /* PBXTextBookmark */;
+			0081705A0FF9760B00EA4261 /* PlistBookmark */ = 0081705A0FF9760B00EA4261 /* PlistBookmark */;
 		};
 		sourceControlManager = 00201A210F5E1D2900EFFDA1 /* Source Control */;
 		userBuildSettings = {
@@ -277,9 +392,9 @@
 	};
 	D357D5230EE62958009D62AE /* HTTPServiceCFNetworkImpl.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1909, 6016}}";
-			sepNavSelRange = "{2083, 0}";
-			sepNavVisRange = "{1924, 1497}";
+			sepNavIntBoundsRect = "{{0, 0}, {1209, 5984}}";
+			sepNavSelRange = "{199, 0}";
+			sepNavVisRange = "{0, 1541}";
 		};
 	};
 }
