@@ -6,6 +6,7 @@
 //
 
 #import "HTTPServiceCFNetworkImpl.h"
+#import "GHNSURL+Utils.h"
 
 #define BUFSIZE 1024
 
@@ -68,14 +69,15 @@ static BOOL isAuthChallengeStatusCode(NSInteger statusCode) {
     [NSThread detachNewThreadSelector:@selector(doSendHTTPRequest) toTarget:self withObject:nil];
 }
 
-
 #pragma mark -
 #pragma mark Private
 
 - (void)doSendHTTPRequest {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
-    NSString *URLString = [[command objectForKey:@"URLString"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSString *URLString = [command objectForKey:@"URLString"];
+	
+	URLString = [NSURL gh_encode:[NSURL gh_decode:URLString]];
+	
     NSURL *URL = [NSURL URLWithString:URLString];
     NSString *method = [command objectForKey:@"method"];
     NSString *body = [command objectForKey:@"body"];

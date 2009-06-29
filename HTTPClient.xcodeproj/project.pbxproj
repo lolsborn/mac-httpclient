@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007AABA00FF972600064D6A3 /* GHNSURL+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 007AAB9F0FF972600064D6A3 /* GHNSURL+Utils.m */; };
 		1DDD582C0DA1D0D100B32029 /* HCDocumentWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* HCDocumentWindow.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -57,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		007AAB9E0FF972600064D6A3 /* GHNSURL+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GHNSURL+Utils.h"; sourceTree = "<group>"; };
+		007AAB9F0FF972600064D6A3 /* GHNSURL+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GHNSURL+Utils.m"; sourceTree = "<group>"; };
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -122,6 +125,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007AAB9D0FF972600064D6A3 /* GHKit */ = {
+			isa = PBXGroup;
+			children = (
+				007AAB9E0FF972600064D6A3 /* GHNSURL+Utils.h */,
+				007AAB9F0FF972600064D6A3 /* GHNSURL+Utils.m */,
+			);
+			name = GHKit;
+			path = src/GHKit;
+			sourceTree = "<group>";
+		};
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +193,7 @@
 				D36B89000F48CA27004BA0B3 /* HCHistoryManager.m */,
 				D357D8970EE7C0E5009D62AE /* HTTPService */,
 				D357D8960EE7C0C3009D62AE /* SouceCodeTextView */,
+				007AAB9D0FF972600064D6A3 /* GHKit */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -345,6 +359,7 @@
 				D357D8940EE7C0C0009D62AE /* TDSourceCodeTextView.m in Sources */,
 				D357DA800EE8E08C009D62AE /* TDHtmlSyntaxHighlighter.m in Sources */,
 				D36B89010F48CA27004BA0B3 /* HCHistoryManager.m in Sources */,
+				007AABA00FF972600064D6A3 /* GHNSURL+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
